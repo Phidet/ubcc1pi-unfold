@@ -1,0 +1,136 @@
+tutorial_1D_proton
+ubcc1pi_tree
+66
+0 0 "cc1pi_signal  &&  mc_muonCosTheta  >= -1             &&  mc_muonCosTheta < -0.27"
+0 0 "cc1pi_signal  &&  mc_muonCosTheta  >= -0.27          &&  mc_muonCosTheta < 0.29"
+0 0 "cc1pi_signal  &&  mc_muonCosTheta  >= 0.29           &&  mc_muonCosTheta < 0.46"
+0 0 "cc1pi_signal  &&  mc_muonCosTheta  >= 0.46           &&  mc_muonCosTheta < 0.58"
+0 0 "cc1pi_signal  &&  mc_muonCosTheta  >= 0.58           &&  mc_muonCosTheta < 0.67"
+0 0 "cc1pi_signal  &&  mc_muonCosTheta  >= 0.67           &&  mc_muonCosTheta < 0.77"
+0 0 "cc1pi_signal  &&  mc_muonCosTheta  >= 0.77           &&  mc_muonCosTheta < 0.82"
+0 0 "cc1pi_signal  &&  mc_muonCosTheta  >= 0.82           &&  mc_muonCosTheta < 0.88"
+0 0 "cc1pi_signal  &&  mc_muonCosTheta  >= 0.88           &&  mc_muonCosTheta < 0.93"
+0 0 "cc1pi_signal  &&  mc_muonCosTheta  >= 0.93           &&  mc_muonCosTheta < 0.97"
+0 0 "cc1pi_signal  &&  mc_muonCosTheta  >= 0.97           &&  mc_muonCosTheta <= 1"
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= -3.141592654   &&  mc_muonPhi      < -2.722713633
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= -2.722713633   &&  mc_muonPhi      < -2.303834613
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= -2.303834613   &&  mc_muonPhi      < -1.884955592
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= -1.884955592   &&  mc_muonPhi      < -1.466076572
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= -1.466076572   &&  mc_muonPhi      < -1.047197551
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= -1.047197551   &&  mc_muonPhi      < -0.6283185307
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= -0.6283185307  &&  mc_muonPhi      < -0.2094395102
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= -0.2094395102  &&  mc_muonPhi      < 0.2094395102
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= 0.2094395102   &&  mc_muonPhi      < 0.6283185307
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= 0.6283185307   &&  mc_muonPhi      < 1.047197551
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= 1.047197551    &&  mc_muonPhi      < 1.466076572
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= 1.466076572    &&  mc_muonPhi      < 1.884955592
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= 1.884955592    &&  mc_muonPhi      < 2.303834613
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= 2.303834613    &&  mc_muonPhi      < 2.722713633
+0 1 "cc1pi_signal  &&  mc_muonPhi       >= 2.722713633    &&  mc_muonPhi      <= 3.141592654
+1 2 "cc1pi_signal  &&  mc_muonMomentum  >= 0.15           &&  mc_muonMomentum < 0.23"
+0 2 "cc1pi_signal  &&  mc_muonMomentum  >= 0.23           &&  mc_muonMomentum < 0.32"
+0 2 "cc1pi_signal  &&  mc_muonMomentum  >= 0.32           &&  mc_muonMomentum < 0.45"
+0 2 "cc1pi_signal  &&  mc_muonMomentum  >= 0.45           &&  mc_muonMomentum < 0.66"
+0 2 "cc1pi_signal  &&  mc_muonMomentum  >= 0.66           &&  mc_muonMomentum < 1.5"
+1 2 "cc1pi_signal  &&  mc_muonMomentum  >= 1.5"
+0 3 "cc1pi_signal  &&  mc_pionCosTheta  >= -1             &&  mc_pionCosTheta  < -0.47"
+0 3 "cc1pi_signal  &&  mc_pionCosTheta  >= -0.47          &&  mc_pionCosTheta  < 0"
+0 3 "cc1pi_signal  &&  mc_pionCosTheta  >= 0              &&  mc_pionCosTheta  < 0.39"
+0 3 "cc1pi_signal  &&  mc_pionCosTheta  >= 0.39           &&  mc_pionCosTheta  < 0.65"
+0 3 "cc1pi_signal  &&  mc_pionCosTheta  >= 0.65           &&  mc_pionCosTheta  < 0.84"
+0 3 "cc1pi_signal  &&  mc_pionCosTheta  >= 0.84           &&  mc_pionCosTheta  < 0.93"
+0 3 "cc1pi_signal  &&  mc_pionCosTheta  >= 0.93           &&  mc_pionCosTheta  <= 1"
+0 4 "cc1pi_signal  &&  mc_pionPhi       >= -3.141592654   &&  mc_pionPhi       < -2.513274123"
+0 4 "cc1pi_signal  &&  mc_pionPhi       >= -2.513274123   &&  mc_pionPhi       < -1.884955592"
+0 4 "cc1pi_signal  &&  mc_pionPhi       >= -1.884955592   &&  mc_pionPhi       < -1.256637061"
+0 4 "cc1pi_signal  &&  mc_pionPhi       >= -1.256637061   &&  mc_pionPhi       < -0.6283185307"
+0 4 "cc1pi_signal  &&  mc_pionPhi       >= -0.6283185307  &&  mc_pionPhi       < 0"
+0 4 "cc1pi_signal  &&  mc_pionPhi       >= 0              &&  mc_pionPhi       < 0.6283185307"
+0 4 "cc1pi_signal  &&  mc_pionPhi       >= 0.6283185307   &&  mc_pionPhi       < 1.256637061"
+0 4 "cc1pi_signal  &&  mc_pionPhi       >= 1.256637061    &&  mc_pionPhi       < 1.884955592"
+0 4 "cc1pi_signal  &&  mc_pionPhi       >= 1.884955592    &&  mc_pionPhi       < 2.513274123"
+0 4 "cc1pi_signal  &&  mc_pionPhi       >= 2.513274123    &&  mc_pionPhi       <= 3.141592654"
+1 5 "cc1pi_signal  &&  mc_pionMomentum  >= 0              &&  mc_pionMomentum  < 0.1"
+0 5 "cc1pi_signal  &&  mc_pionMomentum  >= 0.1            &&  mc_pionMomentum  < 0.16"
+0 5 "cc1pi_signal  &&  mc_pionMomentum  >= 0.16           &&  mc_pionMomentum  < 0.19"
+0 5 "cc1pi_signal  &&  mc_pionMomentum  >= 0.19           &&  mc_pionMomentum  < 0.22"
+0 5 "cc1pi_signal  &&  mc_pionMomentum  >= 0.22           &&  mc_pionMomentum  < 0.6"
+1 5 "cc1pi_signal  &&  mc_pionMomentum  >= 0.6"
+0 6 "cc1pi_signal  &&  mc_muonPionAngle >= 0              &&  mc_muonPionAngle < 0.49"
+0 6 "cc1pi_signal  &&  mc_muonPionAngle >= 0.49           &&  mc_muonPionAngle < 0.93"
+0 6 "cc1pi_signal  &&  mc_muonPionAngle >= 0.93           &&  mc_muonPionAngle < 1.26"
+0 6 "cc1pi_signal  &&  mc_muonPionAngle >= 1.26           &&  mc_muonPionAngle < 1.57"
+0 6 "cc1pi_signal  &&  mc_muonPionAngle >= 1.57           &&  mc_muonPionAngle < 1.88"
+0 6 "cc1pi_signal  &&  mc_muonPionAngle >= 1.88           &&  mc_muonPionAngle < 2.21"
+0 6 "cc1pi_signal  &&  mc_muonPionAngle >= 2.21           &&  mc_muonPionAngle <= 2.65"
+0 7 "cc1pi_signal  &&  mc_nProtons      == 0"
+0 7 "cc1pi_signal  &&  mc_nProtons      == 1"
+0 7 "cc1pi_signal  &&  mc_nProtons      > 1"
+0 7 "cc1pi_signal"
+66
+0 0 "cc1pi_selected_generic  &&  reco_muonCosTheta  >= -1             &&  reco_muonCosTheta < -0.27"
+0 0 "cc1pi_selected_generic  &&  reco_muonCosTheta  >= -0.27          &&  reco_muonCosTheta < 0.29"
+0 0 "cc1pi_selected_generic  &&  reco_muonCosTheta  >= 0.29           &&  reco_muonCosTheta < 0.46"
+0 0 "cc1pi_selected_generic  &&  reco_muonCosTheta  >= 0.46           &&  reco_muonCosTheta < 0.58"
+0 0 "cc1pi_selected_generic  &&  reco_muonCosTheta  >= 0.58           &&  reco_muonCosTheta < 0.67"
+0 0 "cc1pi_selected_generic  &&  reco_muonCosTheta  >= 0.67           &&  reco_muonCosTheta < 0.77"
+0 0 "cc1pi_selected_generic  &&  reco_muonCosTheta  >= 0.77           &&  reco_muonCosTheta < 0.82"
+0 0 "cc1pi_selected_generic  &&  reco_muonCosTheta  >= 0.82           &&  reco_muonCosTheta < 0.88"
+0 0 "cc1pi_selected_generic  &&  reco_muonCosTheta  >= 0.88           &&  reco_muonCosTheta < 0.93"
+0 0 "cc1pi_selected_generic  &&  reco_muonCosTheta  >= 0.93           &&  reco_muonCosTheta < 0.97"
+0 0 "cc1pi_selected_generic  &&  reco_muonCosTheta  >= 0.97           &&  reco_muonCosTheta <= 1"
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= -3.141592654   &&  reco_muonPhi      < -2.722713633
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= -2.722713633   &&  reco_muonPhi      < -2.303834613
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= -2.303834613   &&  reco_muonPhi      < -1.884955592
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= -1.884955592   &&  reco_muonPhi      < -1.466076572
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= -1.466076572   &&  reco_muonPhi      < -1.047197551
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= -1.047197551   &&  reco_muonPhi      < -0.6283185307
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= -0.6283185307  &&  reco_muonPhi      < -0.2094395102
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= -0.2094395102  &&  reco_muonPhi      < 0.2094395102
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= 0.2094395102   &&  reco_muonPhi      < 0.6283185307
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= 0.6283185307   &&  reco_muonPhi      < 1.047197551
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= 1.047197551    &&  reco_muonPhi      < 1.466076572
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= 1.466076572    &&  reco_muonPhi      < 1.884955592
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= 1.884955592    &&  reco_muonPhi      < 2.303834613
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= 2.303834613    &&  reco_muonPhi      < 2.722713633
+0 1 "cc1pi_selected_generic  &&  reco_muonPhi       >= 2.722713633    &&  reco_muonPhi      <= 3.141592654
+1 2 "cc1pi_selected_generic  &&  reco_muonMomentum  >= 0.15           &&  reco_muonMomentum < 0.23"
+0 2 "cc1pi_selected_generic  &&  reco_muonMomentum  >= 0.23           &&  reco_muonMomentum < 0.32"
+0 2 "cc1pi_selected_generic  &&  reco_muonMomentum  >= 0.32           &&  reco_muonMomentum < 0.45"
+0 2 "cc1pi_selected_generic  &&  reco_muonMomentum  >= 0.45           &&  reco_muonMomentum < 0.66"
+0 2 "cc1pi_selected_generic  &&  reco_muonMomentum  >= 0.66           &&  reco_muonMomentum < 1.5"
+1 2 "cc1pi_selected_generic  &&  reco_muonMomentum  >= 1.5"
+0 3 "cc1pi_selected_generic  &&  reco_pionCosTheta  >= -1             &&  reco_pionCosTheta  < -0.47"
+0 3 "cc1pi_selected_generic  &&  reco_pionCosTheta  >= -0.47          &&  reco_pionCosTheta  < 0"
+0 3 "cc1pi_selected_generic  &&  reco_pionCosTheta  >= 0              &&  reco_pionCosTheta  < 0.39"
+0 3 "cc1pi_selected_generic  &&  reco_pionCosTheta  >= 0.39           &&  reco_pionCosTheta  < 0.65"
+0 3 "cc1pi_selected_generic  &&  reco_pionCosTheta  >= 0.65           &&  reco_pionCosTheta  < 0.84"
+0 3 "cc1pi_selected_generic  &&  reco_pionCosTheta  >= 0.84           &&  reco_pionCosTheta  < 0.93"
+0 3 "cc1pi_selected_generic  &&  reco_pionCosTheta  >= 0.93           &&  reco_pionCosTheta  <= 1"
+0 4 "cc1pi_selected_generic  &&  reco_pionPhi       >= -3.141592654   &&  reco_pionPhi       < -2.513274123"
+0 4 "cc1pi_selected_generic  &&  reco_pionPhi       >= -2.513274123   &&  reco_pionPhi       < -1.884955592"
+0 4 "cc1pi_selected_generic  &&  reco_pionPhi       >= -1.884955592   &&  reco_pionPhi       < -1.256637061"
+0 4 "cc1pi_selected_generic  &&  reco_pionPhi       >= -1.256637061   &&  reco_pionPhi       < -0.6283185307"
+0 4 "cc1pi_selected_generic  &&  reco_pionPhi       >= -0.6283185307  &&  reco_pionPhi       < 0"
+0 4 "cc1pi_selected_generic  &&  reco_pionPhi       >= 0              &&  reco_pionPhi       < 0.6283185307"
+0 4 "cc1pi_selected_generic  &&  reco_pionPhi       >= 0.6283185307   &&  reco_pionPhi       < 1.256637061"
+0 4 "cc1pi_selected_generic  &&  reco_pionPhi       >= 1.256637061    &&  reco_pionPhi       < 1.884955592"
+0 4 "cc1pi_selected_generic  &&  reco_pionPhi       >= 1.884955592    &&  reco_pionPhi       < 2.513274123"
+0 4 "cc1pi_selected_generic  &&  reco_pionPhi       >= 2.513274123    &&  reco_pionPhi       <= 3.141592654"
+1 5 "cc1pi_selected_golden   &&  reco_pionMomentum  >= 0              &&  reco_pionMomentum  < 0.1"
+0 5 "cc1pi_selected_golden   &&  reco_pionMomentum  >= 0.1            &&  reco_pionMomentum  < 0.16"
+0 5 "cc1pi_selected_golden   &&  reco_pionMomentum  >= 0.16           &&  reco_pionMomentum  < 0.19"
+0 5 "cc1pi_selected_golden   &&  reco_pionMomentum  >= 0.19           &&  reco_pionMomentum  < 0.22"
+0 5 "cc1pi_selected_golden   &&  reco_pionMomentum  >= 0.22           &&  reco_pionMomentum  < 0.6"
+1 5 "cc1pi_selected_golden   &&  reco_pionMomentum  >= 0.6"
+0 6 "cc1pi_selected_generic  &&  reco_muonPionAngle >= 0              &&  reco_muonPionAngle < 0.49"
+0 6 "cc1pi_selected_generic  &&  reco_muonPionAngle >= 0.49           &&  reco_muonPionAngle < 0.93"
+0 6 "cc1pi_selected_generic  &&  reco_muonPionAngle >= 0.93           &&  reco_muonPionAngle < 1.26"
+0 6 "cc1pi_selected_generic  &&  reco_muonPionAngle >= 1.26           &&  reco_muonPionAngle < 1.57"
+0 6 "cc1pi_selected_generic  &&  reco_muonPionAngle >= 1.57           &&  reco_muonPionAngle < 1.88"
+0 6 "cc1pi_selected_generic  &&  reco_muonPionAngle >= 1.88           &&  reco_muonPionAngle < 2.21"
+0 6 "cc1pi_selected_generic  &&  reco_muonPionAngle >= 2.21           &&  reco_muonPionAngle <= 2.65"
+0 7 "cc1pi_selected_generic  &&  reco_nProtons      == 0"
+0 7 "cc1pi_selected_generic  &&  reco_nProtons      == 1"
+0 7 "cc1pi_selected_generic  &&  reco_nProtons      > 1"
+0 7 "cc1pi_selected_generic"
