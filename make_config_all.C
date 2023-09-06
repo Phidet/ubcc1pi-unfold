@@ -1346,7 +1346,7 @@ void make_config_all() {
   // Dump this information to the output files
   std::ofstream out_file( "myconfig_all.txt" );
   out_file << "ALL\n";
-  out_file << "stv_tree\n";
+  out_file << "ubcc1pi_tree\n";
   out_file << true_bins.size() << '\n';
   for ( const auto& tb : true_bins ) out_file << tb << '\n';
 

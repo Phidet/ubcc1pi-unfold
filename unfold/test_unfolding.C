@@ -11,6 +11,7 @@
 #include "../DAgostiniUnfolder.hh"
 #include "../FiducialVolume.hh"
 #include "../MCC9SystematicsCalculator.hh"
+#include "../ConstrainedCalculator.hh"
 #include "../NormShapeCovMatrix.hh"
 #include "../PGFPlotsDumpUtils.hh"
 #include "../SliceBinning.hh"
@@ -306,7 +307,7 @@ void dump_slice_errors( const std::string& hist_col_prefix,
 
 }
 
-void test_unfolding() {
+void test_unfolding(bool useConstraint = false) {
 
   //// Initialize the FilePropertiesManager and tell it to treat the NuWro
   //// MC ntuples as if they were data
@@ -319,8 +320,8 @@ void test_unfolding() {
   const std::string respmat_file_name( "/uboone/data/users/gardiner/all_fixed.root" );
 
   // Do the systematics calculations in preparation for unfolding
-  //auto* syst_ptr = new MCC9SystematicsCalculator( respmat_file_name, "../systcalc_unfold_fd.conf" );
-  auto* syst_ptr = new MCC9SystematicsCalculator( respmat_file_name, "../systcalc.conf" );
+  auto* syst_ptr = useConstraint ? new ConstrainedCalculator( respmat_file_name, "../systcalc.conf" ) : new MCC9SystematicsCalculator( respmat_file_name, "../systcalc.conf" );
+  // auto* syst_ptr = new MCC9SystematicsCalculator( respmat_file_name, "../systcalc.conf" );
   auto& syst = *syst_ptr;
 
   // Get the tuned GENIE CV prediction in each true bin (including the
@@ -1002,7 +1003,11 @@ void test_unfolding() {
 
 }
 
-int main() {
-  test_unfolding();
+int main(int argc, char* argv[]) {
+  bool useConstraint = false;
+  if (argc == 2 && std::string(argv[1]) == "true") {
+    useConstraint = true;
+  }
+  test_unfolding(useConstraint);
   return 0;
 }

@@ -54,7 +54,7 @@ void make_res_plots( const std::string& branchexpr,
   // For the resolution studies, this is all we really need. Add the
   // appropriate ntuples to the TChain. Also tally the total simulated
   // POT for later scaling purposes.
-  TChain chain( "stv_tree" );
+  TChain chain( "ubcc1pi_tree" );
   double total_simulated_POT = 0.;
 
   const auto& ntuple_map = fpm.ntuple_file_map();

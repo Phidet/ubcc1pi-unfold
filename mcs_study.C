@@ -234,8 +234,8 @@ double track_length_in_vol( const TVector3& start_pos, const TVector3& mom3,
 
 void mcs_study() {
 
-  TChain stv_tree( "stv_tree" );
-  stv_tree.Add( "/uboone/data/users/gardiner/ntuples-stv-MCC9InternalNote/"
+  TChain ubcc1pi_tree( "ubcc1pi_tree" );
+  ubcc1pi_tree.Add( "/uboone/data/users/gardiner/ntuples-stv-MCC9InternalNote/"
     "stv-prodgenie_bnb_nu_uboone_overlay_mcc9.1_v08_00_00_26_filter_"
     "run1_reco2_reco2.root" );
 
@@ -260,14 +260,14 @@ void mcs_study() {
 
     // Set branch addresses for the member variables that will be read
     // directly from the Event TTree.
-    cur_event.set_branch_addresses( stv_tree );
+    cur_event.set_branch_addresses( ubcc1pi_tree );
 
-    int local_entry = stv_tree.LoadTree( entry );
+    int local_entry = ubcc1pi_tree.LoadTree( entry );
     if ( local_entry < 0 ) break;
 
     // Load all of the branches for which we've called
     // TChain::SetBranchAddress() above
-    stv_tree.GetEntry( entry );
+    ubcc1pi_tree.GetEntry( entry );
     ++entry;
 
     size_t num_pfparticles = cur_event.pfp_true_pdg_->size();

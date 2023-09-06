@@ -24,12 +24,12 @@
 // to have this branch.
 bool is_reweightable_mc_ntuple( const std::string& input_file_name ) {
   TFile temp_file( input_file_name.c_str(), "read" );
-  TTree* stv_tree = nullptr;
-  temp_file.GetObject( "stv_tree", stv_tree );
-  if ( !stv_tree ) throw std::runtime_error( "Missing TTree \"stv_tree\" in"
+  TTree* ubcc1pi_tree = nullptr;
+  temp_file.GetObject( "ubcc1pi_tree", ubcc1pi_tree );
+  if ( !ubcc1pi_tree ) throw std::runtime_error( "Missing TTree \"ubcc1pi_tree\" in"
     " the input ROOT file " + input_file_name );
 
-  TBranch* cv_weight_br = stv_tree->GetBranch( TUNE_WEIGHT_NAME.c_str() );
+  TBranch* cv_weight_br = ubcc1pi_tree->GetBranch( TUNE_WEIGHT_NAME.c_str() );
   bool has_cv_weights = ( cv_weight_br != nullptr );
   return has_cv_weights;
 }

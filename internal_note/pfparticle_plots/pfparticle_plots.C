@@ -100,7 +100,7 @@ void make_pfp_plots( const std::string& branchexpr,
   std::map< NFT, double > pot_map;
   std::map< NFT, long > trigger_map;
   for ( const auto& type : file_types ) {
-    tchain_map.emplace( std::make_pair(type, new TChain("stv_tree")) );
+    tchain_map.emplace( std::make_pair(type, new TChain("ubcc1pi_tree")) );
     pot_map[ type ] = 0.;
     trigger_map[ type ] = 0;
   }

@@ -19,7 +19,7 @@ const std::string selection_cuts = "sel_nu_mu_cc && sel_muon_contained"
   " && sel_no_reco_showers && sel_has_p_candidate && sel_protons_contained "
   " && sel_passed_proton_pid_cut";
 
-void plot_eff_hist( TTree& stv_tree, const std::string& branch,
+void plot_eff_hist( TTree& ubcc1pi_tree, const std::string& branch,
   const std::string& variable_name, const std::string& hist_name,
   const std::string& unit_name, int num_bins, double x_min, double x_max)
 {
@@ -53,8 +53,8 @@ void plot_eff_hist( TTree& stv_tree, const std::string& branch,
     // These are actually integer counts, but since we will use them below to
     // compute ratios, intrinsically cast them to double-precision values for
     // convenience.
-    double num_signal = stv_tree.Draw( "", bin_signal.c_str(), "goff" );
-    double num_selected_signal = stv_tree.Draw( "",
+    double num_signal = ubcc1pi_tree.Draw( "", bin_signal.c_str(), "goff" );
+    double num_selected_signal = ubcc1pi_tree.Draw( "",
       (bin_signal + " && " + selection).c_str(), "goff" );
 
     // Compute the efficiency for the current bin
@@ -96,35 +96,35 @@ void plot_eff_hist( TTree& stv_tree, const std::string& branch,
 
 void eff_hist() {
 
-  TChain stv_ch( "stv_tree" );
-  stv_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-prodgenie_bnb_nu_uboone_overlay_mcc9.1_v08_00_00_26_filter_run1_reco2_reco2.root" );
-  stv_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-prodgenie_bnb_nu_uboone_overlay_mcc9.1_v08_00_00_26_filter_run2_reco2_D1D2_reco2.root" );
-  stv_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-prodgenie_bnb_nu_uboone_overlay_mcc9.1_v08_00_00_26_filter_run3_reco2_G_reco2.root" );
+  TChain ubcc1pi_ch( "ubcc1pi_tree" );
+  ubcc1pi_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-prodgenie_bnb_nu_uboone_overlay_mcc9.1_v08_00_00_26_filter_run1_reco2_reco2.root" );
+  ubcc1pi_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-prodgenie_bnb_nu_uboone_overlay_mcc9.1_v08_00_00_26_filter_run2_reco2_D1D2_reco2.root" );
+  ubcc1pi_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-prodgenie_bnb_nu_uboone_overlay_mcc9.1_v08_00_00_26_filter_run3_reco2_G_reco2.root" );
 
   //// Fake data samples (NuWro)
-  //stv_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-high_stat_prodgenie_bnb_nu_overlay_DetVar_Run1_NuWro_reco2_reco2.root" );
-  //stv_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-high_stat_prodgenie_bnb_nu_overlay_DetVar_Run2_NuWro_reco2_reco2.root" );
-  //stv_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-high_stat_prodgenie_bnb_nu_overlay_DetVar_Run3_NuWro_reco2_reco2.root" );
+  //ubcc1pi_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-high_stat_prodgenie_bnb_nu_overlay_DetVar_Run1_NuWro_reco2_reco2.root" );
+  //ubcc1pi_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-high_stat_prodgenie_bnb_nu_overlay_DetVar_Run2_NuWro_reco2_reco2.root" );
+  //ubcc1pi_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-high_stat_prodgenie_bnb_nu_overlay_DetVar_Run3_NuWro_reco2_reco2.root" );
 
- plot_eff_hist( stv_ch, "mc_p3_mu.Mag()", "p_{#mu}^{true}", "pmutrue", "GeV", 80, 0., 2.);
+ plot_eff_hist( ubcc1pi_ch, "mc_p3_mu.Mag()", "p_{#mu}^{true}", "pmutrue", "GeV", 80, 0., 2.);
 
- //plot_eff_hist( stv_ch, "mc_p3_lead_p.Mag()", "p_{p}^{true}", "pptrue", "GeV", 80, 0., 1.2 );
+ //plot_eff_hist( ubcc1pi_ch, "mc_p3_lead_p.Mag()", "p_{p}^{true}", "pptrue", "GeV", 80, 0., 1.2 );
 
-  //plot_eff_hist( stv_ch, "mc_p3_mu.CosTheta()", "cos#theta_{#mu}^{true}", "cthmutrue", "", 25, -1., 1.);
-  //plot_eff_hist( stv_ch, "mc_p3_mu.Phi()", "#phi_{#mu}^{true}", "phimutrue", "rad", 25, 0., M_PI);
+  //plot_eff_hist( ubcc1pi_ch, "mc_p3_mu.CosTheta()", "cos#theta_{#mu}^{true}", "cthmutrue", "", 25, -1., 1.);
+  //plot_eff_hist( ubcc1pi_ch, "mc_p3_mu.Phi()", "#phi_{#mu}^{true}", "phimutrue", "rad", 25, 0., M_PI);
 
-  //plot_eff_hist( stv_ch, "mc_p3_lead_p.Mag()", "p_{lead p}^{true}", "pptrue", "GeV", 25, 0., 2.);
-  //plot_eff_hist( stv_ch, "mc_p3_lead_p.CosTheta()", "cos#theta_{lead p}^{true}", "cthptrue", "", 25, -1., 1.);
-  //plot_eff_hist( stv_ch, "mc_p3_lead_p.Phi()", "#phi_{lead p}^{true}", "phiptrue", "rad", 25, 0., M_PI);
+  //plot_eff_hist( ubcc1pi_ch, "mc_p3_lead_p.Mag()", "p_{lead p}^{true}", "pptrue", "GeV", 25, 0., 2.);
+  //plot_eff_hist( ubcc1pi_ch, "mc_p3_lead_p.CosTheta()", "cos#theta_{lead p}^{true}", "cthptrue", "", 25, -1., 1.);
+  //plot_eff_hist( ubcc1pi_ch, "mc_p3_lead_p.Phi()", "#phi_{lead p}^{true}", "phiptrue", "rad", 25, 0., M_PI);
 
-  //plot_eff_hist( stv_ch, "mc_p3_lead_p.X() / mc_p3_lead_p.Mag()", "px_{lead p}^{true} / p_{lead p}^{true}", "pxp", "", 25, 0., 1.);
-  //plot_eff_hist( stv_ch, "mc_p3_lead_p.Y() / mc_p3_lead_p.Mag()", "py_{lead p}^{true} / p_{lead p}^{true}", "pyp", "", 25, 0., 1.);
-  //plot_eff_hist( stv_ch, "mc_p3_lead_p.Z() / mc_p3_lead_p.Mag()", "pz_{lead p}^{true} / p_{lead p}^{true}", "pzp", "", 25, 0., 1.);
+  //plot_eff_hist( ubcc1pi_ch, "mc_p3_lead_p.X() / mc_p3_lead_p.Mag()", "px_{lead p}^{true} / p_{lead p}^{true}", "pxp", "", 25, 0., 1.);
+  //plot_eff_hist( ubcc1pi_ch, "mc_p3_lead_p.Y() / mc_p3_lead_p.Mag()", "py_{lead p}^{true} / p_{lead p}^{true}", "pyp", "", 25, 0., 1.);
+  //plot_eff_hist( ubcc1pi_ch, "mc_p3_lead_p.Z() / mc_p3_lead_p.Mag()", "pz_{lead p}^{true} / p_{lead p}^{true}", "pzp", "", 25, 0., 1.);
 
-  //plot_eff_hist( stv_ch, "mc_delta_pT", "#deltap_{T}", "deltapT", "GeV", 25, 0., 2.);
-  //plot_eff_hist( stv_ch, "mc_delta_phiT", "#delta#phi_{T}", "deltaphiT", "rad", 25, 0., M_PI);
-  //plot_eff_hist( stv_ch, "mc_delta_alphaT", "#delta#alpha_{T}", "deltaalphaT", "rad", 25, 0., M_PI);
-  //plot_eff_hist( stv_ch, "mc_delta_pL", "#deltap_{L}", "deltapL", "rad", 25, 0., 2.);
-  //plot_eff_hist( stv_ch, "mc_pn", "p_{n}", "pn", "rad", 25, 0., 2.);
+  //plot_eff_hist( ubcc1pi_ch, "mc_delta_pT", "#deltap_{T}", "deltapT", "GeV", 25, 0., 2.);
+  //plot_eff_hist( ubcc1pi_ch, "mc_delta_phiT", "#delta#phi_{T}", "deltaphiT", "rad", 25, 0., M_PI);
+  //plot_eff_hist( ubcc1pi_ch, "mc_delta_alphaT", "#delta#alpha_{T}", "deltaalphaT", "rad", 25, 0., M_PI);
+  //plot_eff_hist( ubcc1pi_ch, "mc_delta_pL", "#deltap_{L}", "deltapL", "rad", 25, 0., 2.);
+  //plot_eff_hist( ubcc1pi_ch, "mc_pn", "p_{n}", "pn", "rad", 25, 0., 2.);
 
 }

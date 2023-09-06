@@ -8,7 +8,7 @@
 // (based on MC truth information) and what events are selected (based on
 // reconstructed information) in terms of our analysis TTree branch variables.
 // Store the results in the output variables eff and pur.
-void compute_eff_pur( TTree& stv_tree, const std::string& signal_cuts,
+void compute_eff_pur( TTree& ubcc1pi_tree, const std::string& signal_cuts,
   const std::string& selection_cuts, double& eff, double& pur )
 {
   // For computing efficiencies and purities, we need to only use MC events.
@@ -19,9 +19,9 @@ void compute_eff_pur( TTree& stv_tree, const std::string& signal_cuts,
   // These are actually integer counts, but since we will use them below to
   // compute ratios, intrinsically cast them to double-precision values for
   // convenience.
-  double num_signal = stv_tree.Draw( "", signal.c_str(), "goff" );
-  double num_selected = stv_tree.Draw( "", selection.c_str(), "goff" );
-  double num_selected_signal = stv_tree.Draw( "",
+  double num_signal = ubcc1pi_tree.Draw( "", signal.c_str(), "goff" );
+  double num_selected = ubcc1pi_tree.Draw( "", selection.c_str(), "goff" );
+  double num_selected_signal = ubcc1pi_tree.Draw( "",
     (signal + " && " + selection).c_str(), "goff" );
 
   eff = num_selected_signal / num_signal;
@@ -68,8 +68,8 @@ void effpur() {
     " && sel_protons_contained && sel_passed_proton_pid_cut",
   "sel_CCNp0pi" };
 
-  TChain stv_ch( "stv_tree" );
-  stv_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-prodgenie_bnb_nu_uboone_overlay_mcc9.1_v08_00_00_26_filter_run1_reco2_reco2.root" );
+  TChain ubcc1pi_ch( "ubcc1pi_tree" );
+  ubcc1pi_ch.Add( "/uboone/data/users/gardiner/ntuples-stv/stv-prodgenie_bnb_nu_uboone_overlay_mcc9.1_v08_00_00_26_filter_run1_reco2_reco2.root" );
 
   size_t num_points = selection_defs.size();
   TGraph* eff_graph = new TGraph( num_points );
@@ -80,7 +80,7 @@ void effpur() {
   for ( size_t k = 0u; k < num_points; ++k  ) {
 
     const auto& selection = selection_defs.at( k );
-    compute_eff_pur( stv_ch, signal, selection, eff, pur );
+    compute_eff_pur( ubcc1pi_ch, signal, selection, eff, pur );
 
     eff_graph->SetPoint( k, k + 1, eff );
     pur_graph->SetPoint( k, k + 1, pur );

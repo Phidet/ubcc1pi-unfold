@@ -5,7 +5,7 @@ const std::string OUTPUT_DIR_NAME = INPUT_DIR_NAME + "/weight_dumps";
 
 void dump_them( const std::string& input_file_name ) {
 
-  TChain events_ch( "stv_tree" );
+  TChain events_ch( "ubcc1pi_tree" );
 
   std::string full_input_file_name = INPUT_DIR_NAME + '/' + input_file_name;
 

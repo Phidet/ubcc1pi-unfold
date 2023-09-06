@@ -1018,7 +1018,7 @@ void analyze(const std::vector<std::string>& in_file_names,
   // Make an output TTree for plotting (one entry per event)
   TFile* out_file = new TFile( output_filename.c_str(), "recreate" );
   out_file->cd();
-  TTree* out_tree = new TTree( "stv_tree", "STV analysis tree" );
+  TTree* out_tree = new TTree( "ubcc1pi_tree", "STV analysis tree" );
 
   // Get the total POT from the subruns TTree. Save it in the output
   // TFile as a TParameter<float>. Real data doesn't have this TTree,

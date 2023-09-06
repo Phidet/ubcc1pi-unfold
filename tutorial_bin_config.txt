@@ -1,5 +1,5 @@
 tutorial_1D_proton
-stv_tree
+ubcc1pi_tree
 26
 0 0 "mc_is_signal && mc_p3_lead_p.CosTheta() >= -1 && mc_p3_lead_p.CosTheta() < -0.5"
 0 0 "mc_is_signal && mc_p3_lead_p.CosTheta() >= -0.5 && mc_p3_lead_p.CosTheta() < 0"

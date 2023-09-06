@@ -189,7 +189,7 @@ void make_config_mcc9_2D_proton() {
   // Dump this information to the output file
   std::ofstream out_file( "myconfig_mcc9_2D_proton.txt" );
   out_file << "Proton2D\n";
-  out_file << "stv_tree\n";
+  out_file << "ubcc1pi_tree\n";
   out_file << true_bins.size() << '\n';
   for ( const auto& tb : true_bins ) out_file << tb << '\n';
 
